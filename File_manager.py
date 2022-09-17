@@ -1,4 +1,7 @@
 import os
+print("𝓟𝓻𝓸𝓰𝓻𝓪𝓶𝓶𝓮𝓭 𝓫𝔂 𝓡𝓸𝓱𝓲")
+
+
 
 
 def file_deleter(dir_list , exx , diR) :
@@ -14,7 +17,7 @@ def file_rename(diR , dir_list , exx) :
     for i in dir_list :
         c = i.split(".")
         if exx in c :
-            print(f"This {i} files has {exx} extension. ")
+            print(f"{i} this file has {exx} extension. ")
             old = diR+"\\" + i
             c [1] = new_ext
             new_name = diR +"\\"+ c [0] + "." + c [1]
@@ -22,13 +25,13 @@ def file_rename(diR , dir_list , exx) :
 
 
 def faltu_files_hatana_wala_hero() :
-    print(f"Currently working on this directory: {os.getcwd()}")
-    diR = input("Please copy the path of the directory in which the files are located: ")
+    print(f"currently on this directory: {os.getcwd()}")
+    diR = input("Enter the location directory in which the file(s) are: ")
     os.chdir(diR)
-    print(f"Directory changed to: {os.getcwd()}")
+    print(f"Okey apne change kr dia ab directory mai ke andr hu mai: {os.getcwd()}")
     dir_list = os.listdir(diR)  # us path mai jojo files hai unki list banayega ye
-    exx = input("Enter the extention you want to deal with: ")
-    inp = int(input("Do you want to rename or delete the fil? if u want to rename the file press 1 and if u want to delete the file press 2: "))
+    exx = input("eneter apko konse extension wale file se probem hai: ")
+    inp = int(input(f"Please press 1 if you want to change the extention of the file, press 2 if u want to delete the fil : "))
     if inp == 2 :
         file_deleter(dir_list , exx , diR)
     elif inp == 1 :
