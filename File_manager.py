@@ -25,12 +25,12 @@ def file_rename(diR , dir_list , exx) :
 
 
 def faltu_files_hatana_wala_hero() :
-    print(f"currently on this directory: {os.getcwd()}")
+    print(f"Currently on this directory: {os.getcwd()}")
     diR = input("Enter the location directory in which the file(s) are: ")
     os.chdir(diR)
-    print(f"Okey apne change kr dia ab directory mai ke andr hu mai: {os.getcwd()}")
+    print(f"Directory changed to: {os.getcwd()}")
     dir_list = os.listdir(diR)  # us path mai jojo files hai unki list banayega ye
-    exx = input("eneter apko konse extension wale file se probem hai: ")
+    exx = input("Enter the extension you want to deal with: ")
     inp = int(input(f"Please press 1 if you want to change the extention of the file, press 2 if u want to delete the fil : "))
     if inp == 2 :
         file_deleter(dir_list , exx , diR)
